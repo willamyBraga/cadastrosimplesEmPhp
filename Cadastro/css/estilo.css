@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+ul, li, a{
+    text-decoration: none;
+    list-style: none;
+}
+.cabecalho{
+    display: flex;
+    background-color: #f7f5f5;
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+.cabecalho a{
+    color: #b4afaf;
+}
+.cabecalho nav{
+    display: flex;
+}
+.cabecalho li{
+    margin: 0 15px;
+}
+.cabecalho li a{
+    color: #b4afaf;
+}
+.cabecalho li a:hover{
+    border-bottom: 1px solid #000;
+}
+
+@media(max-width: 700px)
+{
+    .cabecalho{
+        flex-direction: column;
+    }
+    .cabecalho a{
+        margin-bottom: 10px;
+    }
+}
+
+
+.modal {
+    display: none;
+    }
+     
+    .modal:target {
+    display: flex;
+}
+
+.modal {
+    text-align: left;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    }
+     
+.modal:target {
+    justify-content: space-around;
+    align-items: center;
+    }
+     
+.modal__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    cursor: default;
+    }
+     
+.modal__content {
+    min-width: 480px;
+    position: relative;
+    background-color: #f5f5f5;
+    padding: 2rem;
+    }
+     
+.modal__fechar {
+    color: initial;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0.5rem;
+    display: inline-block;
+}
+
+
+.formulario
+  {
+    display: flex;
+    align-items: center;
+    margin: 20px 15px;
+    width: 1140px;
+    height: 250px;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #b4afaf;
+  }
+  form input{
+    display: flex;
+    max-width:100%;
+    align-items: center;
+  }
+  input{
+    width: 500px;
+    margin: 10px;
+  }
+  label{
+    margin: 5px;
+  }
+  button{
+    width: 100px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #f7f5f5;
+    justify-content: space-between;
+    color: #b4afaf;
+  }
+  @media(max-width: 375px)
+  {
+    .formulario{
+      width: 375px;
+      height: 250px;
+      flex-direction: row;
+    }
+    input{
+      width: 270px;
+    }
+  }
+  @media(min-width:400px) and (max-width: 600px)
+  {
+    .formulario{
+      width: 600px;
+      height: 250px;
+      flex-direction: row;
+    }
+    input{
+      width: 370px;
+    }
+  }
+  @media(min-width: 601px) and   (max-width: 800px)
+  {
+    .formulario{
+      width: 800px;
+      height: 200px;
+    }
+    input{
+      width: 700px;
+    }
+  }
